@@ -1,0 +1,12 @@
+.talkDetails .reqSummary {
+  background: var(--color-primary);
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  font-feature-settings: "cpsp" on;
+  color: var(--color-white);
+  padding: 13px 26px;
+  margin-bottom: 26px;
+}

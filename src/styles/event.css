@@ -1,0 +1,358 @@
+@media screen and (max-width: 991px) {
+  .eventView {
+    margin-top: 150px;
+  }
+}
+.eventView .respoim {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .eventView .respoim {
+    display: none;
+  }
+}
+.eventView .container {
+  display: flex;
+  max-width: 1260px;
+  flex-direction: row;
+  margin: auto;
+  padding-top: 200px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1285px) {
+  .eventView .container {
+    padding: 0 20px;
+    padding-top: 200px;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .eventView .container {
+    padding: 0;
+    padding-top: 200px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .eventView .container {
+    flex-direction: column-reverse;
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .eventView .container {
+    flex-direction: column-reverse;
+    background: var(--black);
+    padding-top: 20px;
+    align-items: center;
+  }
+}
+.eventView .container .contentContainer {
+  width: 55%;
+  padding-right: var(--spc-48);
+}
+
+@media screen and (max-width: 1110px) {
+  .eventView .container .contentContainer {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .eventView .container .contentContainer {
+    width: 100%;
+  }
+  .eventView .container .contentContainer .live-event-banner-wrapper {
+    padding: 50px 0;
+  }
+  .eventView
+    .container
+    .contentContainer
+    .live-event-banner-wrapper
+    .text_containar {
+    background: transparent;
+  }
+  .eventView
+    .container
+    .contentContainer
+    .live-event-banner-wrapper
+    .text_containar {
+    padding: 0 var(--spc-16) var(--spc-48);
+    margin: 0;
+  }
+  .eventView
+    .container
+    .contentContainer
+    .live-event-banner-wrapper
+    .text_containar
+    h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .eventView .container .contentContainer .live-event-banner-wrapper {
+    padding: 50px 0;
+  }
+  .eventView
+    .container
+    .contentContainer
+    .live-event-banner-wrapper
+    .text_containar {
+    padding: 0 0 var(--spc-48);
+    margin: 0;
+  }
+  .eventView
+    .container
+    .contentContainer
+    .live-event-banner-wrapper
+    .text_containar
+    h1 {
+    font-size: 24px;
+  }
+}
+.eventView .container .contentContainer .webinarDetails {
+  background: var(--color-white);
+  margin-bottom: 0;
+}
+.eventView .container .contentContainer .webinarDetails > div {
+  padding: var(--spc-48) var(--spc-16) 0;
+}
+.eventView .container .contentContainer .webinarDetails .text_containar {
+  padding: 0;
+}
+.eventView .container .contentContainer .webinarDetails .webinar-markdown {
+  margin: 0;
+}
+.eventView
+  .container
+  .contentContainer
+  .webinarDetails
+  .webinar-markdown
+  ul
+  li {
+  font-size: 18px;
+}
+.eventView .container .event-card-wrapper {
+  margin-top: 150px;
+  width: 40%;
+  position: sticky;
+  top: 100px;
+  margin-bottom: 48px;
+}
+.eventView .container .event-card-wrapper .card > section {
+  display: flex;
+  gap: var(--spc-16);
+}
+.eventView .container .event-card-wrapper .card > section > span {
+  width: calc(25% - 16px * 3 / 4);
+  min-width: calc(25% - 16px * 3 / 4);
+  max-height: none;
+  display: inline-flex;
+  height: auto;
+  gap: var(--spc-8);
+  padding: var(--spc-8) var(--spc-16);
+}
+.eventView .container .event-card-wrapper .card > section > span > h1,
+.eventView .container .event-card-wrapper .card > section > span > p {
+  padding: 0 !important;
+  line-height: 100%;
+}
+@media screen and (max-width: 991px) {
+  .eventView .container .event-card-wrapper {
+    position: static;
+    margin-top: 0;
+    width: 90%;
+    margin: -50px auto 50px;
+    padding: var(--spc-16);
+  }
+  .eventView .container .event-card-wrapper .card {
+    width: 100%;
+    padding: 0;
+  }
+  .eventView .container .event-card-wrapper .card > section {
+    display: flex;
+    gap: var(--spc-16);
+  }
+  .eventView .container .event-card-wrapper .card > section > span {
+    width: calc(25% - 16px * 3 / 4);
+    min-width: calc(25% - 16px * 3 / 4);
+    display: inline-flex;
+    padding: var(--spc-8) var(--spc-16);
+  }
+  .eventView .container .event-card-wrapper .header .typo__heading4 {
+    padding: 0;
+  }
+  .eventView .container .event-card-wrapper .header .banner_img {
+    display: none;
+  }
+}
+.eventView.pastEvent {
+  padding-top: 50px;
+}
+.eventView.pastEvent .container {
+  padding-top: 20px;
+}
+@media screen and (max-width: 576px) {
+  .eventView.pastEvent .container {
+    background: transparent !important;
+  }
+}
+.eventView.pastEvent .container .event-card-wrapper {
+  margin-top: 64px;
+  width: 40%;
+  position: sticky;
+  top: 100px;
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 577px) and (max-width: 1000px) {
+  .eventView.pastEvent .container .event-card-wrapper {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 991px) {
+  .eventView.pastEvent .container .event-card-wrapper {
+    position: relative;
+    top: auto;
+    margin-top: 0;
+    width: 90%;
+    margin: 25px auto 50px;
+    padding: var(--spc-16);
+  }
+  .eventView.pastEvent .container .event-card-wrapper aside.card {
+    padding: 0;
+  }
+}
+.eventView.pastEvent .container .contentContainer .webinarDetails > div {
+  padding: 0;
+}
+.eventView.pastEvent
+  .container
+  .contentContainer
+  .webinarDetails
+  > div
+  .text_containar {
+  margin-top: var(--spc-64);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spc-64);
+}
+.eventView.pastEvent
+  .container
+  .contentContainer
+  .webinarDetails
+  > div
+  .text_containar
+  p,
+.eventView.pastEvent
+  .container
+  .contentContainer
+  .webinarDetails
+  > div
+  .text_containar
+  ul
+  li {
+  font-size: 18px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 576px) {
+  .eventView.pastEvent
+    .container
+    .contentContainer
+    .webinarDetails
+    > div
+    .text_containar {
+    padding: 0 var(--spc-16) var(--spc-16);
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .eventView.pastEvent
+    .container
+    .contentContainer
+    .webinarDetails
+    > div
+    aside.card {
+    padding: 0;
+  }
+}
+.eventView.pastEvent .preview-container {
+  max-width: 1260px;
+  margin: 150px auto 0;
+}
+.eventView.pastEvent .preview-container .mobIm {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .eventView.pastEvent .preview-container {
+    margin: 0;
+  }
+  .eventView.pastEvent .preview-container aside.card {
+    padding: 0;
+  }
+  .eventView.pastEvent .preview-container .deskIm {
+    display: none;
+  }
+  .eventView.pastEvent .preview-container .mobIm {
+    display: block;
+  }
+}
+.eventView.pastEvent .preview-container .image-container,
+.eventView.pastEvent .preview-container .iframe-container {
+  height: 70vh;
+  background: var(--black);
+}
+@media screen and (max-width: 576px) {
+  .eventView.pastEvent .preview-container .image-container,
+  .eventView.pastEvent .preview-container .iframe-container {
+    height: auto;
+    background: transparent;
+  }
+}
+.eventView.pastEvent .preview-container .image-container img,
+.eventView.pastEvent .preview-container .iframe-container img,
+.eventView.pastEvent .preview-container .image-container iframe,
+.eventView.pastEvent .preview-container .iframe-container iframe {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 576px) {
+  .eventView.pastEvent .preview-container .iframe-container iframe {
+    height: 40vh;
+  }
+}
+.eventView.pastEvent .preview-container .yt-container {
+  height: 70vh;
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--spc-16);
+  border: solid 1px var(--color-border);
+}
+@media screen and (max-width: 576px) {
+  .eventView.pastEvent .preview-container .yt-container {
+    border-radius: 0;
+    border: none;
+    height: auto;
+    height: auto;
+    background: transparent;
+  }
+}
+.eventView.pastEvent .preview-container .yt-container a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.eventView.pastEvent .preview-container .yt-container a img {
+  height: 75px;
+  width: 75px;
+}
+.eventView.pastEvent .preview-container .yt-container .thumbs img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

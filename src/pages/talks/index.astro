@@ -1,31 +1,8 @@
 ---
-import PageLayout from "@layouts/PageLayout.astro";
-import BeginJourney from "@components/LandingPage/BeginJourney/BeginJourney.astro";
-import { fetchAllTalks, fetchTalkById } from "src/services/talks";
-import TalksLayout from "@components/talks/Talkslayout/TalksLayout";
-
-export const prerender = false;
-
-const { slug } = Astro.params;
-const talks = await fetchAllTalks();
-
-const page = talks?.find((page) => page.slug === slug)!;
-
-const { videoId, title } = page;
-const response = await fetchTalkById(videoId ?? "");
-const talkData = response?.[0];
+import "../../styles/blog.css";
+import SearchTalk from "../../components/SearchTalk";
 ---
 
-<PageLayout
-  title={title}
-  description={""}
-  navTheme={"RED"}
-  slugUrl={true}
-  concatTitle={true}
-  hideBuildWithUs={true}
->
-  <div class="event_mainWrapper">
-    <TalksLayout client:only="react" talk={talkData} videoId={videoId} />
-    <BeginJourney />
-  </div>
-</PageLayout>
+
+<SearchTalk client:only="react" />
+

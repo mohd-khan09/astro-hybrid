@@ -1,0 +1,123 @@
+.blogList_wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.blogList_wrapper_search {
+  margin-top: 160px;
+}
+.blogList_wrapper .confirm_search_btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.blogList_wrapper .search-bar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.blogList_wrapper .blog-search-bar {
+  width: 100%;
+  color: var(--color-primary);
+  display: flex;
+  padding: 10px var(--spc-16);
+  border-radius: var(--spc-8);
+  border: 1px solid var(--color-border);
+  padding-left: 45px;
+  background: var(--color-white);
+}
+.blogList_wrapper .search-icon {
+  position: absolute;
+  left: 10px;
+}
+.blogList_wrapper .allblog_heading {
+  color: var(--color-primary);
+  font-family: soleil;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.08px;
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-top: 0px;
+}
+.blog-search-bar::placeholder {
+  color: var(--color-primary);
+  opacity: 0.5;
+}
+.blogList_Container_wrapper {
+  margin-top: 40px;
+}
+.blogList_Container_wrapper .card_container {
+  margin-top: 40px; /* Add 40px gap above the section */
+}
+.center_allblog_heading {
+  text-align: center;
+}
+/* // */
+.blogList_wrapper .card_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: var(--spc-32);
+  padding-bottom: var(--spc-32);
+  grid-column: -1;
+  gap: 75px 40px;
+}
+@media screen and (max-width: 1040px) {
+  .blogList_wrapper .card_container {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blogList_wrapper .card_container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+}
+/* //for seachbar */
+@media screen and (max-width: 576px) {
+  .allblog_heading {
+    padding: 0 20px;
+    font-size: 24px !important;
+  }
+  .blogList_wrapper .search-bar-container {
+    width: 100%;
+    padding: 0px 26px;
+  }
+  .blogList_wrapper .search-icon {
+    left: 36px;
+  }
+  .blogList_wrapper .confirm_search_btn {
+    right: 36px;
+  }
+}
+/* for ipad screen */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .blogList_wrapper .search-bar-container {
+    width: 70%;
+    padding: 0px 13px;
+  }
+  .allblog_heading {
+    padding: 0 20px;
+  }
+  .blogList_wrapper .search-icon {
+    left: 23px;
+  }
+  .blogList_wrapper .confirm_search_btn {
+    right: 23px;
+  }
+}

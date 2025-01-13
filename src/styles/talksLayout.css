@@ -1,0 +1,48 @@
+/* this code is just for talks page */
+
+.eventView .container .talksContentContainer {
+  width: 100% !important;
+}
+.eventView .container .talksContentContainer .card {
+  display: none;
+}
+
+.noTalkFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+@media screen and (max-width: 768px) {
+  .noTalkFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 20px 100px 20px;
+    gap: 20px;
+    margin: auto;
+    max-width: 725px;
+  }
+  .noTalkFound .typo__heading2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .noTalkFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 20px 100px 20px;
+    gap: 20px;
+    margin: auto;
+    height: 100%;
+  }
+  .noTalkFound .typo__heading2 {
+    font-size: 36px;
+  }
+}
+
+/* this code is just for talks page */
