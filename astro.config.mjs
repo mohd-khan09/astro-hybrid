@@ -6,5 +6,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   adapter: awsAmplify(),
-  output: "hybrid",
+  //   output: "hybrid",
 });
