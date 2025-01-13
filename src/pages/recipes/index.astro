@@ -1,0 +1,24 @@
+---
+import { fetchAllRecipes } from "../../services/recipes";
+
+// Fetch all recipes at build time
+const response = await fetchAllRecipes();
+const RecipesList = response?.recipes;
+---
+
+<html>
+  <head>
+    <title>Recipes</title>
+  </head>
+  <body>
+    <h1>All Recipes</h1>
+    <ul>
+      {RecipesList.map((recipe:any) => (
+        <li>
+          <a href={`/recipes/${recipe.slug}`}>{recipe.name}</a>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>
+ 

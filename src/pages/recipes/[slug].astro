@@ -1,0 +1,83 @@
+---
+
+import { fetchAllRecipes } from "../../services/recipes";
+
+export async function getStaticPaths() {
+  const response = await fetchAllRecipes();
+  const RecipesList = response?.recipes;
+
+  return RecipesList.map((recipe: any) => {
+    return {
+      params: { slug: recipe?.slug },
+      props: { recipe },
+    };
+  });
+}
+
+const { recipe } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{recipe.name} - Recipe</title>
+  </head>
+  <body>
+    <header>
+      <h1>{recipe.name}</h1>
+      <img src={recipe.image} alt={recipe.name} style="max-width: 100%; height: 200px;" />
+    </header>
+    
+    <main>
+      <section>
+        <h2>About this Recipe</h2>
+        <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
+        <p><strong>Difficulty:</strong> {recipe.difficulty}</p>
+        <p><strong>Prep Time:</strong> {recipe.prepTimeMinutes} minutes</p>
+        <p><strong>Cook Time:</strong> {recipe.cookTimeMinutes} minutes</p>
+        <p><strong>Servings:</strong> {recipe.servings}</p>
+        <p><strong>Calories per Serving:</strong> {recipe.caloriesPerServing}</p>
+        <p><strong>Rating:</strong> {recipe.rating} ({recipe.reviewCount} reviews)</p>
+      </section>
+
+      <section>
+        <h2>Ingredients</h2>
+        <ul>
+          {recipe.ingredients.map((ingredient) => (
+            <li>{ingredient}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Instructions</h2>
+        <ol>
+          {recipe.instructions.map((step) => (
+            <li>{step}</li>
+          ))}
+        </ol>
+      </section>
+
+      <section>
+        <h2>Tags</h2>
+        <ul>
+          {recipe.tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Meal Type</h2>
+        <ul>
+          {recipe.mealType.map((type) => (
+            <li>{type}</li>
+          ))}
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by User ID: {recipe.userId}</p>
+    </footer>
+  </body>
+</html>
