@@ -1,13 +1,13 @@
 import awsAmplify from "astro-aws-amplify";
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-
+import awsAmplify from "astro-aws-amplify";
 export default defineConfig({
   integrations: [react()],
   adapter: awsAmplify(),
   output: "static",
 });
-// import awsAmplify from "astro-aws-amplify";
+
 // import { defineConfig } from "astro/config";
 // import netlify from "@astrojs/netlify";
 // import react from "@astrojs/react";
