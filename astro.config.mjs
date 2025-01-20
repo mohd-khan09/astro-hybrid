@@ -5,7 +5,14 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   integrations: [react()],
   adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
     imageService: true,
+    devImageService: "sharp",
+    assets: {
+      enabled: false, // Disable assets feature since it's not supported
+    },
   }),
   output: "hybrid",
   trailingSlash: "always",
