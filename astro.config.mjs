@@ -11,7 +11,7 @@ export default defineConfig({
     imageService: true,
     devImageService: "sharp",
     assets: {
-      enabled: false, // Disable assets feature since it's not supported
+      enabled: false, // Disable assets feature since it's not supportedas
     },
   }),
   output: "static",
