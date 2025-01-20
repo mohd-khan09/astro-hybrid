@@ -14,6 +14,6 @@ export default defineConfig({
       enabled: false, // Disable assets feature since it's not supported
     },
   }),
-  output: "hybrid",
+  output: "static",
   trailingSlash: "always",
 });
