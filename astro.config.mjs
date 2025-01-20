@@ -6,4 +6,5 @@ export default defineConfig({
   integrations: [react()],
   adapter: vercel(),
   output: "hybrid",
+  trailingSlash: "always",
 });
