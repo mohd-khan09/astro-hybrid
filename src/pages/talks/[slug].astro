@@ -6,7 +6,7 @@ const { slug } = Astro.params;
 const talks = await fetchAllTalks();
 
 const page = talks?.find((page) => page.slug === slug)!;
-
+//
 const { videoId, title } = page;
 const response = await fetchTalkById(videoId ?? "");
 const talkData = response?.[0];
