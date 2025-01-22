@@ -13,7 +13,7 @@
     "@astrojs/react": "^4.1.3",
     "@types/react": "^19.0.6",
     "@types/react-dom": "^19.0.3",
-    "astro": "^4.0.3",
+    "astro": "^5.1.8",
     "astro-aws-amplify": "^0.1.0",
     "install": "^0.13.0",
     "npm": "^11.0.0",
