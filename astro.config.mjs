@@ -5,5 +5,5 @@ import awsAmplify from "astro-aws-amplify";
 export default defineConfig({
   integrations: [react()],
   adapter: awsAmplify(),
-  output: "static",
+  output: "server",
 });

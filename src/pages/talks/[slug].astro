@@ -4,7 +4,7 @@ import { fetchAllTalks, fetchTalkById } from "../../services/talks";
 import TalksLayout from "../../components/TalksLayout";
 const { slug } = Astro.params;
 const talks = await fetchAllTalks();
- export const prerender = false
+//  export const prerender = false
 const page = talks?.find((page) => page.slug === slug)!;
 
 const { videoId, title } = page;
