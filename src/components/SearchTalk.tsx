@@ -5,7 +5,7 @@ import TalksCard from "./TalksCard";
 import type { TTalksWithSlugsAndThunmbnails } from "../services/talks/talksService.types";
 import { fetchAllTalks } from "../services/talks";
 
-const ITEMS_PER_PAGE = 9;
+const ITEMS_PER_PAGE = 1000;
 
 const SearchTalk: React.FC = () => {
   const [searchInput, setSearchInput] = useState<string>("");

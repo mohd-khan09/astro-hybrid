@@ -5,6 +5,7 @@ import "../styles/event.css";
 import TalkDetails from "./TalkDetalils";
 interface TalksLayoutProps {
   talk: TTalk | undefined;
+  talkId: string | undefined | null;
 }
 export const youtubeParser = (url: string) => {
   const regExp =
