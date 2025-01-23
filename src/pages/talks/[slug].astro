@@ -1,6 +1,6 @@
 ---
 import { fetchAllTalks, fetchTalkById } from "../../services/talks";
-export const prerender = false;
+// export const prerender = false;
 import TalksLayout from "../../components/TalksLayout";
 const { slug } = Astro.params;
 const talks = await fetchAllTalks();
@@ -12,9 +12,6 @@ const response = await fetchTalkById(videoId ?? "");
 const talkData = response?.[0];
 ---
 
-
-  <div class="event_mainWrapper">
-    <TalksLayout client:only="react" talk={talkData} videoId={videoId} />
-
-  </div>
-
+<div class="event_mainWrapper">
+  <TalksLayout talk={talkData} videoId={videoId} />
+</div>

@@ -6,7 +6,7 @@ import awsAmplify from "astro-aws-amplify";
 export default defineConfig({
   integrations: [react()],
   adapter: awsAmplify(),
-  output: "hybrid",
+  output: "server",
 });
 
 // import { defineConfig } from "astro/config";

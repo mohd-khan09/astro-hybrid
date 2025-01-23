@@ -2,6 +2,7 @@
 dist/
 # generated types
 .astro/
+.amplify-hosting/
 
 # dependencies
 node_modules/

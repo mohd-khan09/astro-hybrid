@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import type { TTalk } from "../services/talks/talksService.types";
 import "../styles/talksLayout.css";
 import "../styles/event.css";
