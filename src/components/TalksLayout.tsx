@@ -5,7 +5,6 @@ import "../styles/event.css";
 import TalkDetails from "./TalkDetalils";
 interface TalksLayoutProps {
   talk: TTalk | undefined;
-  videoId: string | null | undefined;
 }
 export const youtubeParser = (url: string) => {
   const regExp =
@@ -13,9 +12,15 @@ export const youtubeParser = (url: string) => {
   const match = url.match(regExp);
   return match && match[7].length == 11 ? match[7] : false;
 };
+export const getYouTubeVideoId = (url: string) => {
+  const regex =
+    /(?:https?:\/\/)?(?:www\.)?youtube\.com\/.*v=([^&]*)|(?:https?:\/\/)?youtu\.be\/([^?]*)/;
+  const match = url?.match(regex);
+  return match && (match[1] || match[2]) ? match[1] || match[2] : null;
+};
 
-const TalksLayout: React.FC<TalksLayoutProps> = ({ talk, videoId }) => {
-  if (!talk || !videoId) {
+const TalksLayout: React.FC<TalksLayoutProps> = ({ talk }) => {
+  if (!talk) {
     return (
       <div className="noTalkFound ">
         <h1 className="typo__heading2 --font-36">
@@ -29,6 +34,7 @@ const TalksLayout: React.FC<TalksLayoutProps> = ({ talk, videoId }) => {
       </div>
     );
   }
+  const videoId = getYouTubeVideoId(talk.link);
   const youtubeUrl = talk?.link ? youtubeParser(talk?.link) : false;
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   const talkBody = talk?.summary ?? "";
