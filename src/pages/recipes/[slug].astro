@@ -1,5 +1,6 @@
 ---
 
+import Test from "../../components/Test.astro";
 import { fetchAllRecipes } from "../../services/recipes";
 
 export async function getStaticPaths() {
@@ -81,3 +82,4 @@ const { recipe } = Astro.props;
     </footer>
   </body>
 </html>
+<Test />    
