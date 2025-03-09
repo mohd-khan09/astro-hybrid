@@ -1,0 +1,20 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import ChildComponent from "@components/ChildComponent.astro";
+
+export async function getStaticPaths() {
+    const response = await fetch("https://api.example.com/posts");
+    const posts = await response.json();
+
+    return posts.map((post) => ({
+    params: { slug: post.slug }, 
+    props: { post }, 
+  }));
+}
+
+const { post } = Astro.props;
+---
+<PageLayout>
+    <ChildComponent client:only="react" />
+    <ChildComponent data={post} /> <!-- Pass data as props to avoid API calls in child components -->
+</PageLayout>
